@@ -221,14 +221,12 @@
           {{ end }}
         </div>
       </div>
-      {{ with .GetPage "testimonial"}}
       <div class="col-lg-6 col-sm-6 col-9 about-me-images wow fadeInUp" data-wow-duration="1.5s">
         <div class="owl-carousel owl-theme wow fadeInUp" data-wow-duration="1.5s">
-          {{ range .Params.testimonial_slider }}
+          {{ range .Params.book_slider }}
             <div class="testimonial-holder">
               <img class="img-fluid" src="{{ .image | absURL }}" alt="{{ .name }}">
             </div>
-          {{ end }}
           {{ end }}
     </div>
     </div>
@@ -261,24 +259,46 @@
 <!-- End Portfolio -->
 
 <!-- Start Testimonials -->
-{{ with .GetPage "testimonial"}}
+{{ with .GetPage "team"}}
 <style>{{.Params.custom_css | safeCSS}}</style>
-<section class="testimonials {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="testimonial">
-  <div class="container">
-    <div class="row">
-      <div class="testimonials-container col-lg-8 offset-lg-2">
+  <section class="about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="testimonial">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 about-me-text d-flex align-self-center">
         <h1 class="wow fadeInUp" data-wow-duration="1.5s">{{ .Title | markdownify }}</h1>
-        <div class="owl-carousel owl-theme wow fadeInUp" data-wow-duration="1.5s">
-          {{ range .Params.testimonial_slider }}
-          <div class="single-testimonial">
-            <div class="testimonial-holder">
-              <img class="img-fluid" src="{{ .image | absURL }}" alt="{{ .name }}">
-              <h2>{{ .name }}</h2>
-              <span>{{ .designation | markdownify }}</span>
-              <p><i class="fa fa-quote-left"></i> {{ .content | markdownify }} <i class="fa fa-quote-right"></i></p>
+        </div>
+            <div class="col-12 mb-5 pb-5">
+              <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                  <img src="{{ .Params.team_lead_image | absURL }}" alt="{{ .Params.team_lead_name | markdownify }}" class="img-fluid w-100">
+                </div>
+                <div class="col-md-6">
+                  <h2><div class="post-title">{{ .Params.team_lead_name | markdownify }}</div></h2>
+                  <p class="post-summary">{{ .Params.team_lead_role | markdownify }}</p>
+                  <h6>{{ .Params.team_lead_description | markdownify }}</h6>
+                  <a href="/blog/post-2/" class="btn btn-outline-primary">Kontakt</a>
+                </div>
+              </div>
             </div>
+            
+      
+            {{ range .Params.team_core }}
+            
+            <div class="col-lg-4 col-md-5 col-sm-12 mb-5 ">
+              <div class="card border-0">
+                <img src="{{ .image | absURL }}" alt="{{ .name }}" class="img-fluid mb-4">
+                <div class="card-body p-0">
+                  <h3>{{ .name | markdownify }}</h3>
+                  <p class="post-summary">{{ .role | markdownify }}</p>
+                  <h6>{{ .description | markdownify }}</h6>
+                </div>
+              </div>
+            </div>
+
+            {{ end }}
+            
+            
           </div>
-          {{ end }}
         </div>
       </div>
     </div>
