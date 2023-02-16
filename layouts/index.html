@@ -235,7 +235,7 @@
 {{ end }}
 <!-- end call to action -->
 
-<!-- Start Portfolio -->
+<!-- Start obrazstavno-besedilo -->
 {{ with .GetPage "obrazstavno-besedilo"}}
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="portfolio">
@@ -256,9 +256,9 @@
   </div>
 </section>
 {{ end }}
-<!-- End Portfolio -->
+<!-- End obrazstavno-besedilo -->
 
-<!-- Start Testimonials -->
+<!-- Start team -->
 {{ with .GetPage "team"}}
 <style>{{.Params.custom_css | safeCSS}}</style>
   <section class="about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="testimonial">
@@ -305,7 +305,30 @@
   </div>
 </section>
 {{ end }}
-<!-- End Testimonials -->
+<!-- End team -->
+
+<!-- Start kolofon -->
+{{ with .GetPage "kolofon"}}
+<style>{{.Params.custom_css | safeCSS}}</style>
+<section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="portfolio">
+  <div class="container-fluid text-center">
+    <h1 class="wow fadeInUp" data-wow-duration="1.5s">{{ .Title | markdownify }}</h1>
+    <div class="row">
+      {{- $sectionDelimiter := "<!-- section break -->" -}}
+      {{- $rawContentSections := split .RawContent $sectionDelimiter -}}
+      {{- if gt (len $rawContentSections) 1 -}}
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="content wow fadeInUp" data-wow-duration="1.5s">{{ index $rawContentSections 0 | .RenderString | markdownify | emojify }}</div>
+      </div>
+      <div class="col-lg-6 col-sm-6 col-9">
+        <div class="content wow fadeInUp" data-wow-duration="1.5s">{{ index $rawContentSections 1 | markdownify | emojify }}</div>
+      </div>
+      {{- end -}}
+    </div>
+  </div>
+</section>
+{{ end }}
+<!-- End kolofon -->
 
 <!-- Start Contact -->
 {{ with .GetPage "contact"}}
