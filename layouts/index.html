@@ -224,15 +224,27 @@
 <!-- call to action -->
 {{ with .GetPage "call-to-action" }}
 <style>{{.Params.custom_css | safeCSS}}</style>
-<section id="cta" class="need-service overlay section-sm wow fadeInUp {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} data-wow-duration="1.5s" style="background-image: url('{{ .Params.bg_image | absURL }}');">
-  <div class="container position-relative z-index-9">
-    <h1>{{ .Title | markdownify }}</h1>
-    {{ with .Content }}<div class="text-white content">{{ . | markdownify }}</div> {{ end }}
-    {{ with .Params.button }}
-    {{ if .enable }}
-    <a href="{{ .link | absURL}}">{{ .label }}</a>
-    {{ end }}
-    {{ end }}
+<section class="about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="about">
+  <div class="container">
+    <div class="row about-me-holder">
+      <div class="col-lg-6 col-md-6 col-sm-6 about-me-text d-flex align-self-center">
+        <div class="text-holder wow fadeInUp" data-wow-duration="1.5s">
+          <h1>{{ .Title | markdownify }}</h1>
+          <div class="content">{{ .Content | markdownify | emojify }}</div>
+          {{ with .Params.button }}
+          {{ if .enable }}
+          <a href="{{ .link }}" class="download-cv hvr-icon-hang"> {{ .label }} &nbsp; &nbsp; &nbsp;</a>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+      {{ with .Params.image }}
+      <div class="col-lg-6 col-sm-6 col-9 about-me-images wow fadeInUp" data-wow-duration="1.5s">
+        <img class="img-fluid" src="{{ . | absURL }}" alt="about-me">
+      </div>
+      {{ end }}
+    </div>
+    </div>
   </div>
 </section>
 {{ end }}
