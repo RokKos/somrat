@@ -889,6 +889,8 @@ input:checked+label span:last-child {
 
 .about-me-images img {
   width: 100%;
+  
+  /* Note(Rok Kos): disabled grayscale effect
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   -ms-filter: grayscale(100%);
@@ -898,11 +900,12 @@ input:checked+label span:last-child {
   -moz-transition: all linear .3s;
   -ms-transition: all linear .3s;
   -o-transition: all linear .3s;
-  transition: all linear .3s;
+  transition: all linear .3s; */
 }
 
 .about-me-images img:hover {
   width: 100%;
+  
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
   -ms-filter: grayscale(0%);
