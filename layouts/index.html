@@ -93,7 +93,7 @@
 </section>
 <!-- End Menu -->
 
-<!-- Start Predstaviv video -->
+<!-- Start Predstavitveni video -->
 {{ with .GetPage "01-video-presentation" }}
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="video-presentation {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="video-presentation">
@@ -104,10 +104,10 @@
   </div>
 </section>
 {{ end }}
-<!-- End Services -->
+<!-- End Predstavitveni video -->
 
-<!-- Start About Me -->
-{{ with .GetPage "about" }}
+<!-- Start About project -->
+{{ with .GetPage "02-about" }}
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="about">
   <div class="container">
@@ -135,25 +135,23 @@
   </div>
 </section>
 {{ end }}
-<!-- End About Me -->
+<!-- End About project -->
 
 <!-- Start Dialogi -->
-{{ with .GetPage "service" }}
+{{ with .GetPage "03-dialogs" }}
 <style>{{.Params.custom_css | safeCSS}}</style>
-<section class="services {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="service">
-  <div class="container">
-    <div class="wow fadeInUp" data-wow-duration="1.5s">
-      <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/608334799?h=1316392ac9&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-    </div>
+<section class="services {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="dialogs">
+  <div class="vimeo-full-width">
+    <iframe src="https://player.vimeo.com/video/608334799?h=1316392ac9&loop=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
   </div>
 </section>
 {{ end }}
 <!-- End Services -->
 
 <!-- call to action -->
-{{ with .GetPage "call-to-action" }}
+{{ with .GetPage "04-book" }}
 <style>{{.Params.custom_css | safeCSS}}</style>
-<section class="about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="about">
+<section class="about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="book">
   <div class="container">
     <div class="row about-me-holder">
       <div class="about-me-text">
@@ -182,9 +180,9 @@
 <!-- end call to action -->
 
 <!-- Start team -->
-{{ with .GetPage "team"}}
+{{ with .GetPage "05-team"}}
 <style>{{.Params.custom_css | safeCSS}}</style>
-  <section class="about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="testimonial">
+  <section class="about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="team">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 about-me-text d-flex align-self-center">
@@ -231,9 +229,9 @@
 <!-- End team -->
 
 <!-- Start PROJECT EXHIBITIONS -->
-{{ with .GetPage "project-exhibitions"}}
+{{ with .GetPage "06-project-exhibitions"}}
 <style>{{.Params.custom_css | safeCSS}}</style>
-<section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="portfolio">
+<section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="project-exhibitions">
   <div class="container">
     <div class="row">
   <!--<div class="container-fluid align-self-center"> -->
@@ -248,9 +246,9 @@
 <!-- End kolofon -->
 
 <!-- Start PROJECT EXHIBITIONS -->
-{{ with .GetPage "media-coverage"}}
+{{ with .GetPage "08-media-coverage"}}
 <style>{{.Params.custom_css | safeCSS}}</style>
-<section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="portfolio">
+<section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="media-coverage">
   <div class="container">
     <div class="row">
   <!--<div class="container-fluid align-self-center"> -->
@@ -265,9 +263,9 @@
 <!-- End kolofon -->
 
 <!-- Start kolofon -->
-{{ with .GetPage "kolofon"}}
+{{ with .GetPage "09-kolofon"}}
 <style>{{.Params.custom_css | safeCSS}}</style>
-<section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="portfolio">
+<section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="kolofon">
   <div class="container-fluid text-center">
     <h1 class="wow fadeInUp" data-wow-duration="1.5s">{{ .Title | markdownify }}</h1>
     <div class="row">
