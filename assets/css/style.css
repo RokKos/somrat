@@ -285,10 +285,10 @@ body {
 }
 
 .introduction {
-  font-size: 60px;
+  font-size: 120px;
   font-weight: 600;
   text-shadow: 2px 2px 10px #0000009f;
-  font-family: 'nan_success_sans_triallight'
+  font-family: 'nan_success_titling_trialwide'
 }
 
 .typist-blink:after {
