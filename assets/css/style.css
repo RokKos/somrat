@@ -276,20 +276,12 @@ body {
 }
 
 .head-container {
-  display: table;
-  position: absolute;
-  top: 0;
   height: 100%;
   color: white;
   font-size: 30px;
   font-family: 'Rubik', sans-serif !important;
   font-weight: 300;
   z-index: 10;
-}
-
-.head-holder {
-  display: table-cell;
-  vertical-align: middle;
 }
 
 .introduction {
