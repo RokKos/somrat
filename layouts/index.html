@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <!-- Start Header -->
-{{ with .GetPage "banner" }}
+{{ with .GetPage "00-banner" }}
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="header {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="home">
   <div class="slider-prev-button slider-button">
@@ -94,9 +94,9 @@
 <!-- End Menu -->
 
 <!-- Start Predstaviv video -->
-{{ with .GetPage "service" }}
+{{ with .GetPage "01-video-presentation" }}
 <style>{{.Params.custom_css | safeCSS}}</style>
-<section class="services {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="service">
+<section class="video-presentation {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="video-presentation">
   <div class="container">
     <div class="wow fadeInUp" data-wow-duration="1.5s">
       <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/608334799?h=1316392ac9&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
