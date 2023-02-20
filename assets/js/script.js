@@ -197,66 +197,6 @@
 			 End Menu
 		----------------------------------*/
 
-	/*--------------------------------
-			Start About Me
-	----------------------------------*/
-	// Initializing Skillbar Animation
-	$('.skill h3').waypoint({
-		handler: function (direction) {
-			if (direction == "up") {
-				$('.skillbar').each(function () {
-					$(this).find('.skillbar-bar').css("width", "0");
-				});
-			} else if (direction == "down") {
-				$('.skillbar').each(function () {
-					$(this).find('.skillbar-bar').animate({
-						width: jQuery(this).attr('data-percent')
-					}, 2000);
-				});
-			}
-		},
-		offset: 'bottom-in-view'
-	});
-	/*--------------------------------
-			End About Me
-	----------------------------------*/
-
-	/*--------------------------------
-			 Start Portfolio
-	----------------------------------*/
-	// Shuffle js filter 
-	var containerEl = document.querySelector('.filtr-wrapper');
-	if (containerEl) {
-		var Shuffle = window.Shuffle;
-		var myShuffle = new Shuffle(document.querySelector('.filtr-wrapper'), {
-			itemSelector: '.filtr-item',
-			buffer: 1
-		});
-
-		jQuery('input[name="shuffle-filter"]').on('change', function (evt) {
-			var input = evt.currentTarget;
-			if (input.checked) {
-				myShuffle.filter(input.value);
-			}
-		});
-	}
-
-	// Initialize MagnificPopup Plugin
-	$('.filtr-wrapper').magnificPopup({
-		type: 'image',
-		delegate: '.image-pop',
-		gallery: {
-			enabled: true
-		},
-		zoom: {
-			enabled: true,
-			duration: 300,
-			easing: 'ease-in-out'
-		}
-	});
-	/*--------------------------------
-			 End Portfolio
-	----------------------------------*/
 
 	/*--------------------------------
 			 Start Testimonials
@@ -279,17 +219,6 @@
 	// Code for Opera Mini
 	var vh = $(window).height();
 	if (navigator.userAgent.indexOf('Opera Mini') != -1) {
-		// Setting Fun Facts Value Immediately 
-		work.start();
-		happyClient.start();
-		projects.start();
-		coffee.start();
-		// Setting Skillbar Value Immediately
-		$('.skillbar').each(function () {
-			$(this).find('.skillbar-bar').animate({
-				width: jQuery(this).attr('data-percent')
-			}, 0);
-		});
 		// Removing Bootstrap Class and Re-Style Input
 		$("input").removeClass("form-control");
 		$("input").css({
@@ -305,21 +234,6 @@
 	if (navigator.userAgent.indexOf('UCBrowser') != -1) {
 		// Removing Full-Screen Nav
 		$(".navigation-icon").css("display", "none");
-		$(".fun-facts").css({
-			"display": "table",
-			"margin": "auto"
-		});
-		// Setting Fun Facts Value Immediately 
-		work.start();
-		happyClient.start();
-		projects.start();
-		coffee.start();
-		// Setting Skillbar Value Immediately
-		$('.skillbar').each(function () {
-			$(this).find('.skillbar-bar').animate({
-				width: jQuery(this).attr('data-percent')
-			}, 0);
-		});
 	}
 	/*--------------------------------
 			End Code for Mobile Devices
