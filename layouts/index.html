@@ -11,8 +11,10 @@
     <i class="fa fa-angle-right"></i>
   </div>
   <div class="owl-carousel owl-full-width owl-theme" id="background-slide">
-    {{ range .Params.slider_images }}
-    <div class="slider"><img class="img-fluid" src="{{ . | absURL }}" alt="slider-background"></div>
+    {{ range .Page.Resources }}
+    <div class="slider">
+      {{partial "img-header-bg.html" (dict "File" . "Alt" .)}}
+    </div>
     {{ end }}
   </div>
   <div class="container">
@@ -101,6 +103,9 @@
       <div class="vimeo-full-width">
         <iframe src="https://player.vimeo.com/video/608334799?h=1316392ac9&loop=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
       </div>
+      <div class="testimonial-holder">
+      <div class="content">{{ .Content }}</div>
+    </div>
   </div>
 </section>
 {{ end }}
