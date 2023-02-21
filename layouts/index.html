@@ -196,7 +196,8 @@
             <div class="col-12 mb-5 pb-5">
               <div class="row align-items-center">
                 <div class="col-lg-4 col-md-5 col-sm-12 mb-5 ">
-                  <img src="{{ .Params.team_lead_image | absURL }}" alt="{{ .Params.team_lead_name | markdownify }}" class="img-fluid w-100">
+                  <div class = "w-100"></div>
+                  {{partial "img.html" (dict "File" (.Page.Resources.GetMatch .Params.team_lead_image) "Alt" (.Params.team_lead_name | markdownify))}}
                 </div>
                 <div class="col-md-6">
                   <h2><div class="post-title">{{ .Params.team_lead_name | markdownify }}</div></h2>
@@ -207,12 +208,14 @@
               </div>
             </div>
             
-      
-            {{ range .Params.team_core }}
-            
+            {{ $teamPhotoResource := .Page.Resources}}
+            {{ $teamCore := .Params.team_core}}
+            {{ range $teamCore }}
             <div class="col-lg-4 col-md-5 col-sm-12 mb-5 ">
               <div class="card border-0">
-                <img src="{{ .image | absURL }}" alt="{{ .name }}" class="img-fluid mb-4">
+                <div class ="mb-4">
+                {{partial "img.html" (dict "File" ($teamPhotoResource.GetMatch .image) "Alt" (.name | markdownify))}}
+                </div>
                 <div class="card-body p-0">
                   <h3>{{ .name | markdownify }}</h3>
                   <p class="post-summary">{{ .role | markdownify }}</p>
@@ -220,10 +223,7 @@
                 </div>
               </div>
             </div>
-
             {{ end }}
-            
-            
           </div>
         </div>
       </div>
