@@ -173,9 +173,9 @@
         </div>
       </div>
         <div class="owl-carousel owl-theme wow fadeInUp" data-wow-duration="1.5s">
-          {{ range .Params.book_slider }}
+          {{ range .Page.Resources }}
             <div class="testimonial-holder">
-              <img class="img-fluid" src="{{ .image | absURL }}" alt="{{ .name }}">
+              {{partial "img.html" (dict "File" . "Alt" .)}}
             </div>
           {{ end }}
     </div>
