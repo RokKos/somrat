@@ -108,17 +108,17 @@
 <!-- Start About project -->
 {{ with .GetPage "02-about" }}
 <style>{{.Params.custom_css | safeCSS}}</style>
-<section class="about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="about">
+<section class="about {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="about">
   <div class="container">
-    <div class="row about-me-holder">
+    <div class="row about-holder">
       {{- $sectionDelimiter := "<!-- Small Text -->" -}}
       {{- $rawContentSections := split .RawContent $sectionDelimiter -}}
       {{- if gt (len $rawContentSections) 1 -}}
       <div class="text-holder wow fadeInUp" data-wow-duration="1.5s">
-        <div class="about-me-text d-flex align-self-center">
+        <div class="about-text d-flex align-self-center">
             <div class="content">{{ index $rawContentSections 0 | .RenderString | markdownify | emojify }}</div>
         </div>
-        <div class="about-me-text-small d-flex align-self-center">
+        <div class="about-text-small d-flex align-self-center">
             <div class="content">{{ index $rawContentSections 1 | .RenderString | markdownify | emojify }}</div>
         </div>
         {{ end }}
@@ -148,10 +148,10 @@
 <!-- call to action -->
 {{ with .GetPage "04-book" }}
 <style>{{.Params.custom_css | safeCSS}}</style>
-<section class="about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="book">
+<section class="book {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="book">
   <div class="container">
-    <div class="row about-me-holder">
-      <div class="about-me-text">
+    <div class="row book-holder">
+      <div class="book-text">
         <div class="text-holder  wow fadeInUp" data-wow-duration="1.5s">
           <h1>{{ .Title | markdownify }}</h1>
           <div class="d-flex align-self-center">
@@ -179,10 +179,10 @@
 <!-- Start team -->
 {{ with .GetPage "05-team"}}
 <style>{{.Params.custom_css | safeCSS}}</style>
-  <section class="about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="team">
+  <section class="team {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="team">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-6 about-me-text d-flex align-self-center">
+        <div class="col-lg-6 col-md-6 col-sm-6 team-text d-flex align-self-center">
         <h1 class="wow fadeInUp" data-wow-duration="1.5s">{{ .Title | markdownify }}</h1>
         </div>
             <div class="col-12 mb-5 pb-5">

@@ -775,19 +775,19 @@ input:checked+label span:last-child {
    Start About Me
 ----------------------------------*/
 
-.about-me {
+.about {
   background: #000000;
   padding: 125px 0px 70px 0px;
 }
 
-.about-me-text h1 {
+.about-text h1 {
   position: relative;
   color: #6f6f6f;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
-.about-me-text h1:before {
+.about-text h1:before {
   content: "";
   position: absolute;
   left: 0;
@@ -797,12 +797,12 @@ input:checked+label span:last-child {
   background: #6f6f6f;
 }
 
-.about-me-text p {
+.about-text p {
   color: #6f6f6f;
   font-size: 32px;
 }
 
-.about-me-text-small p {
+.about-text-small p {
   color: #6f6f6f;
   font-size: 20px;
   margin-top: 50px;
@@ -825,7 +825,7 @@ input:checked+label span:last-child {
   color: #3661bd;
 }
 
-.about-me-images img {
+.about-images img {
   width: 100%;
   
   /* Note(Rok Kos): disabled grayscale effect
@@ -841,7 +841,7 @@ input:checked+label span:last-child {
   transition: all linear .3s; */
 }
 
-.about-me-images img:hover {
+.about-images img:hover {
   width: 100%;
   
   -webkit-filter: grayscale(0%);
@@ -851,7 +851,7 @@ input:checked+label span:last-child {
   filter: grayscale(0%);
 }
 
-.about-me .hvr-icon-hang:before {
+.about .hvr-icon-hang:before {
   content: "\f0ab";
   position: absolute;
   font-family: 'nan_success_sans_triallight', sans-serif;
@@ -1834,7 +1834,7 @@ textarea.form-control::-webkit-input-placeholder,
 ----------------------------------*/
 
 @media (max-width: 767px) {
-  .about-me-text {
+  .about-text {
     display: block;
     height: auto;
     margin-bottom: 30px;
@@ -1845,7 +1845,7 @@ textarea.form-control::-webkit-input-placeholder,
     order: 2;
   }
 
-  .about-me-image {
+  .about-image {
     -webkit-order: 1;
     -moz-order: 1;
     -ms-order: 1;
@@ -1854,7 +1854,7 @@ textarea.form-control::-webkit-input-placeholder,
     margin-bottom: 30px;
   }
 
-  .about-me-holder {
+  .about-holder {
     display: flex;
     flex-wrap: wrap;
   }
@@ -1878,13 +1878,13 @@ textarea.form-control::-webkit-input-placeholder,
 }
 
 @media (min-width:601px) and (max-width: 991px) {
-  .about-me {
+  .about {
     padding: 125px 0px 35px 0px;
   }
 }
 
 @media (max-width: 600px) {
-  .about-me {
+  .about {
     padding: 70px 0px 0px 0px;
   }
 }

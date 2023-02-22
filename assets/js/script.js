@@ -257,7 +257,7 @@
 	wow.init();
 
 	// Toggling Visibility of Scroll Up Button
-	$(".about-me-images").waypoint({
+	$(".about").waypoint({
 		handler: function (direction) {
 			$(".scroll-up").toggleClass("scroll-up-show");
 		},
