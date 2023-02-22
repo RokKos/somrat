@@ -212,9 +212,9 @@
                 {{partial "img.html" (dict "File" ($teamPhotoResource.GetMatch .image) "Alt" (.name | markdownify))}}
                 </div>
                 <div class="card-body p-0">
-                  <h3>{{ .name | markdownify }}</h3>
-                  <p class="post-summary">{{ .role | markdownify }}</p>
-                  <h6>{{ .description | markdownify }}</h6>
+                  <h3 class="team-member-name">{{ .name | markdownify }}</h3>
+                  <p class="team-member-role">{{ .role | markdownify }}</p>
+                  <h6 class="team-member-description">{{ .description | markdownify }}</h6>
                 </div>
               </div>
             </div>
