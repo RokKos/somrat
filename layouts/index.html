@@ -195,9 +195,9 @@
                   {{partial "img.html" (dict "File" (.Page.Resources.GetMatch .Params.team_lead_image) "Alt" (.Params.team_lead_name | markdownify))}}
                 </div>
                 <div class="col-md-6">
-                  <h2><div class="post-title">{{ .Params.team_lead_name | markdownify }}</div></h2>
-                  <p class="post-summary">{{ .Params.team_lead_role | markdownify }}</p>
-                  <h6>{{ .Params.team_lead_description | markdownify }}</h6>
+                  <h2><div class="team-lead-name">{{ .Params.team_lead_name | markdownify }}</div></h2>
+                  <p class="team-lead-role">{{ .Params.team_lead_role | markdownify }}</p>
+                  <h6 class="team-lead-description">{{ .Params.team_lead_description | markdownify }}</h6>
                   <a href="/blog/post-2/" class="btn btn-outline-primary">Kontakt</a>
                 </div>
               </div>
