@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'nan_success_sans_triallight', sans-serif;
   height: 100%;
 }
 
@@ -137,7 +137,7 @@ body {
 .scroll-up.hvr-icon-up:before {
   content: "\f077";
   font-size: 15px;
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'nan_success_sans_triallight', sans-serif;
   font-weight: 900;
   height: 30px;
   width: 30px;
@@ -279,7 +279,7 @@ body {
   height: 100%;
   color: white;
   font-size: 30px;
-  font-family: 'Rubik', sans-serif !important;
+  font-family: 'nan_success_sans_triallight', sans-serif !important;
   font-weight: 300;
   z-index: 10;
 }
@@ -298,27 +298,6 @@ body {
 
 .typist-blink>.selectedText {
   display: none;
-}
-
-.head-holder .hireMe {
-  display: inline-block;
-  background: transparent;
-  margin-top: 18px;
-  text-decoration: none;
-  color: white;
-  font-family: 'Rubik', sans-serif;
-  font-size: 19px;
-  font-weight: 500;
-  border: 2px solid white;
-  padding: 5px 18px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.head-holder .hireMe:hover {
-  background: #6f6f6f;
-  color: #fff;
-  border: 2px solid #6f6f6f;
 }
 
 input+label {
@@ -396,7 +375,7 @@ input:checked+label span:last-child {
   display: none;
   z-index: 11;
   color: #fff;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'nan_success_sans_triallight', sans-serif;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -500,7 +479,7 @@ input:checked+label span:last-child {
 
 .fullscreen-nav-holder a {
   color: white;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'nan_success_sans_triallight', sans-serif;
   font-size: 20px;
   font-weight: 500;
   text-decoration: none;
@@ -917,7 +896,7 @@ input:checked+label span:last-child {
 .about-me .hvr-icon-hang:before {
   content: "\f0ab";
   position: absolute;
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'nan_success_sans_triallight', sans-serif;
   right: 8px;
   font-weight: 900;
   top: 6px;
@@ -1219,14 +1198,14 @@ input:checked+label span:last-child {
 
 .item-caption h2 {
   font-size: 32px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'nan_success_sans_triallight', sans-serif;
   font-weight: 700;
   padding-left: 13px;
 }
 
 .item-caption p {
   padding-left: 16px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'nan_success_sans_triallight', sans-serif;
   font-weight: 500;
 }
 
@@ -1257,28 +1236,6 @@ input:checked+label span:last-child {
 .mfp-zoom-out-cur .mfp-image-holder,
 .mfp-close {
   cursor: crosshair;
-}
-
-.loadmore {
-  display: inline-block;
-  background: transparent;
-  margin-top: 25px;
-  text-decoration: none;
-  color: #6f6f6f;
-  font-family: 'Rubik', sans-serif;
-  font-size: 17px;
-  font-weight: 500;
-  border: 2px solid #6f6f6f;
-  padding: 5px 18px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.loadmore:hover {
-  background: #6f6f6f;
-  color: #fff;
-  border: 2px solid #6f6f6f;
-  text-decoration: none;
 }
 
 /*--------------------------------
@@ -1514,7 +1471,7 @@ textarea.form-control::-webkit-input-placeholder,
 .hvr-icon-push:before {
   content: "\f1d8";
   right: 19px;
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'nan_success_sans_triallight', sans-serif;
   font-weight: 900;
 }
 
@@ -1633,12 +1590,6 @@ textarea.form-control::-webkit-input-placeholder,
     font-size: 21px;
     margin-top: 7px;
     margin-bottom: 2px;
-  }
-
-  .head-holder .hireMe {
-    margin-top: 10px;
-    font-size: 18px;
-    padding: 3px 12px;
   }
 }
 
@@ -1829,12 +1780,6 @@ textarea.form-control::-webkit-input-placeholder,
   .animated-text {
     font-size: 18px;
   }
-
-  .head-holder .hireMe {
-    margin-top: 10px;
-    font-size: 16px;
-    padding: 3px 12px;
-  }
 }
 
 @media (max-height: 300px) {
@@ -1844,12 +1789,6 @@ textarea.form-control::-webkit-input-placeholder,
 
   .animated-text {
     font-size: 18px;
-  }
-
-  .head-holder .hireMe {
-    margin-top: 10px;
-    font-size: 16px;
-    padding: 3px 12px;
   }
 
   .head-container {
