@@ -15,9 +15,18 @@ body {
   height: 100%;
 }
 
+.content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
 .content a {
   color: inherit;
   border-bottom: 1px dashed #212121;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: break-word;
 }
 
 
@@ -804,6 +813,7 @@ input:checked+label span:last-child {
 
 .about-text p {
   color: #6f6f6f;
+  line-height: 1.4;
   font-size: 32px;
 }
 
