@@ -797,14 +797,18 @@ input:checked+label span:last-child {
   background: #6f6f6f;
 }
 
+.about-text body {
+  color: #6f6f6f;
+}
+
 .about-text p {
   color: #6f6f6f;
-  font-size: 32px;
+  font-size: 48px;
 }
 
 .about-text-small p {
   color: #6f6f6f;
-  font-size: 20px;
+  font-size: 32px;
   margin-top: 50px;
 }
 
@@ -813,11 +817,13 @@ input:checked+label span:last-child {
   text-decoration: none;
   color: #0741c0;
   font-weight: 700;
+  font-size: 48px;
   margin-top: 15px;
   display: inline-block;
   border: 2px solid #0741c0;
   padding: 7px 10px;
   width: 100%;
+  text-align: center;
 }
 
 .download-cv:hover,

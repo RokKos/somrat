@@ -127,9 +127,8 @@
         {{ with .Params.button }}
             {{ if .enable }}
             {{ $pathToPDF := printf "%s" .link | printf "%s%s" $pathToStaticFolders | printf "%s" }}
-            {{ $pathToPDF | absURL }}
             <a href="https://docs.google.com/viewer?url={{ $pathToPDF | absURL }}&embedded=true"
-            class="download-cv hvr-icon-hang"> {{ .label }} &nbsp; &nbsp; &nbsp;</a>
+            class="download-cv hvr-hang hvr-bounce-to-bottom"> {{ .label }} &nbsp; &nbsp; &nbsp;</a>
             {{ end }}
         {{ end }}
       </div>
