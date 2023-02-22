@@ -108,7 +108,7 @@
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="about {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="about">
   <div class="container">
-    <div class="row about-holder">
+    <div class="row no-marginLR">
       {{- $sectionDelimiter := "<!-- Small Text -->" -}}
       {{- $rawContentSections := split .RawContent $sectionDelimiter -}}
       {{- if gt (len $rawContentSections) 1 -}}
@@ -151,7 +151,7 @@
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="book {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="book">
   <div class="container">
-    <div class="row book-holder">
+    <div class="row no-marginLR book-holder">
       <div class="book-text">
         <div class="text-holder  wow fadeInUp" data-wow-duration="1.5s">
           <h1>{{ .Title | markdownify }}</h1>
@@ -232,7 +232,7 @@
 <section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="project-exhibitions">
   <div class="container">
       <h1 class="wow fadeInUp" data-wow-duration="1.5s">{{ .Title | markdownify }}</h1>
-      <div class="row">
+      <div class="row no-marginLR">
         <div class="content wow fadeInUp" data-wow-duration="1.5s">{{ .Content | markdownify | emojify }}</div>
       </div>
     </div>
@@ -247,11 +247,9 @@
 <section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="media-coverage">
   <div class="container">
       <h1 class="wow fadeInUp" data-wow-duration="1.5s">{{ .Title | markdownify }}</h1>
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-6">
+      <div class="row no-marginLR">
         <div class="content wow fadeInUp" data-wow-duration="1.5s">{{ .Content | markdownify | emojify }}</div>
       </div>
-    </div>
   </div>
 </section>
 {{ end }}
