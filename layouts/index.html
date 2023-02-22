@@ -11,9 +11,9 @@
     <i class="fa fa-angle-right"></i>
   </div>
   <div class="owl-carousel owl-full-width owl-theme" id="background-slide">
-    {{ range .Page.Resources }}
+    {{ range $elem_index, $elem_val := .Page.Resources }}
     <div class="slider">
-      {{partial "img-header-bg.html" (dict "File" . "Alt" .)}}
+      {{partial "img-header-bg.html" (dict "File" $elem_val "Alt" $elem_val "Position" $elem_index)}}
     </div>
     {{ end }}
   </div>
