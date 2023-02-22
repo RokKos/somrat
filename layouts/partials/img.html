@@ -49,7 +49,7 @@ image size, as Hugo will upscale small images */}}
     
     <img 
     loading="lazy"
-   alt="{{ $alt }}" title="{{ $alt }}" src="{{ $src }}" 
+   alt="{{ $alt }}" title="{{ $alt }}" src="{{ $src.RelPermalink }}" 
    height="{{ $src.Height}}" width="{{ $src.Width }}" class="img-fluid">
 
 </picture>
