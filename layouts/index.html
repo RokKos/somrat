@@ -123,9 +123,13 @@
         </div>
         {{ end }}
 
+        {{ $pathToStaticFolders := printf "%s" $.Site.BaseURL}}
         {{ with .Params.button }}
             {{ if .enable }}
-            <a href="{{ .link }}" class="download-cv hvr-icon-hang"> {{ .label }} &nbsp; &nbsp; &nbsp;</a>
+            {{ $pathToPDF := printf "%s" .link | printf "%s%s" $pathToStaticFolders | printf "%s" }}
+            {{ $pathToPDF | absURL }}
+            <a href="https://docs.google.com/viewer?url={{ $pathToPDF | absURL }}&embedded=true"
+            class="download-cv hvr-icon-hang"> {{ .label }} &nbsp; &nbsp; &nbsp;</a>
             {{ end }}
         {{ end }}
       </div>
@@ -139,7 +143,7 @@
 <!-- Start Dialogi -->
 {{ with .GetPage "03-dialogs" }}
 <style>{{.Params.custom_css | safeCSS}}</style>
-<section class="services {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="dialogs">
+<section class="dialogs {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="dialogs">
     <lite-vimeo videoid="608334799"></lite-vimeo>
 </section>
 {{ end }}

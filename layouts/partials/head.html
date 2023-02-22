@@ -13,6 +13,7 @@
   <!-- plugins -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   {{ range site.Params.plugins.css }}
+  <!-- Preload from here: https://web.dev/defer-non-critical-css/ -->
   <link rel="preload" href="{{ .link | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="styles.css"></noscript>
   {{ end }}
