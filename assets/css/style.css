@@ -402,26 +402,6 @@ input:checked+label span:last-child {
   text-align: center;
 }
 
-.first-name {
-  font-size: 50px;
-  font-weight: 400;
-  padding-bottom: 20px;
-}
-
-.last-name {
-  font-size: 100px;
-  font-weight: 600;
-  line-height: 1;
-  margin-bottom: 42px;
-}
-
-.occupation {
-  font-size: 18px;
-  font-weight: 400;
-  height: 30px;
-  overflow: hidden;
-}
-
 .fulscreen-nav {
   margin-top: 50px;
   display: -webkit-box;
@@ -637,7 +617,7 @@ input:checked+label span:last-child {
 .menu-item a {
   text-decoration: none;
   color: #fff;
-  font-size: 17px;
+  font-size: 24px;
   -webkit-transition: color 1s;
   transition: color 1s;
 }
