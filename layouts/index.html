@@ -98,10 +98,7 @@
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="video-presentation {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="video-presentation">
     <div class="wow fadeInUp" data-wow-duration="1.5s">
-      <div class="vimeo-full-width">
-        <iframe loading="lazy" src="https://player.vimeo.com/video/608334799?h=1316392ac9&loop=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-        <script defer src="https://player.vimeo.com/api/player.js"></script>
-      </div>
+        <lite-vimeo videoid="608334799"></lite-vimeo>
     </div>
   </div>
 </section>
@@ -143,10 +140,7 @@
 {{ with .GetPage "03-dialogs" }}
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="services {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="dialogs">
-  <div class="vimeo-full-width">
-    <iframe loading="lazy" src="https://player.vimeo.com/video/608334799?h=1316392ac9&loop=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-    <script defer src="https://player.vimeo.com/api/player.js"></script>
-  </div>
+    <lite-vimeo videoid="608334799"></lite-vimeo>
 </section>
 {{ end }}
 <!-- End Services -->

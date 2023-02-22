@@ -2215,18 +2215,3 @@ textarea.form-control::-webkit-input-placeholder,
   font-style: normal;
 
 }
-
-/* VIMEO */
-
-.vimeo-full-width {
-  padding: 56.25% 0 0 0;
-  position: relative;
-}
-
-.vimeo-full-width iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
