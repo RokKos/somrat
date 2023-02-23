@@ -303,21 +303,28 @@
 <!-- End kolofon -->
 
 <!-- Start Contact -->
-{{ with .GetPage "contact"}}
+{{ with .GetPage "11-logotips"}}
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="contact {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="contact">
   <div class="container">
     <div class="row">
       <div class="footer col-lg-10 offset-lg-1">
         <hr>
-        <ul class="footer-icons list-inline">
-          {{ range site.Params.social }}
-          <li><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
-          {{ end }}
-        </ul>
+      </div>
+    </div>
+    <div class="row">      
+        {{ range .Page.Resources }}
+        <div class="col-3">
+            {{partial "img.html" (dict "File" . "Alt" .)}}
+        </div>
+        {{ end }}
+    </div>
+      <div class="row">
+        <div class="col">
         <div class="credit content">
           {{ site.Params.copyright | markdownify }}
         </div>
+      </div>
       </div>
     </div>
   </div>
