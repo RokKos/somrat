@@ -146,9 +146,9 @@
     <lite-vimeo videoid="608334799"></lite-vimeo>
 </section>
 {{ end }}
-<!-- End Services -->
+<!-- End Dialogi -->
 
-<!-- call to action -->
+<!-- book -->
 {{ with .GetPage "04-book" }}
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="book {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="book">
@@ -177,7 +177,7 @@
   </div>
 </section>
 {{ end }}
-<!-- end call to action -->
+<!-- end book -->
 
 <!-- Start team -->
 {{ with .GetPage "05-team"}}
@@ -241,9 +241,9 @@
   </div>
 </section>
 {{ end }}
-<!-- End kolofon -->
+<!-- End PROJECT EXHIBITIONS -->
 
-<!-- Start PROJECT EXHIBITIONS -->
+<!-- Start media-coverage -->
 {{ with .GetPage "08-media-coverage"}}
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="media-coverage">
@@ -255,7 +255,20 @@
   </div>
 </section>
 {{ end }}
-<!-- End kolofon -->
+<!-- End media-coverage -->
+
+<!-- Start trak -->
+{{ with .GetPage "10-trak" }}
+<style>{{.Params.custom_css | safeCSS}}</style>
+<section class="trak {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="trak">
+  <div class="trak">
+    {{ range .Page.Resources }}
+      {{partial "img-trak.html" (dict "File" . "Alt" .)}}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+<!-- End trak -->
 
 <!-- Start kolofon -->
 {{ with .GetPage "09-kolofon"}}
@@ -279,7 +292,6 @@
 </section>
 {{ end }}
 <!-- End kolofon -->
-
 
 <!-- Start Contact -->
 {{ with .GetPage "contact"}}
