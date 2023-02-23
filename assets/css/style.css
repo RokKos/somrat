@@ -1861,3 +1861,25 @@ textarea.form-control::-webkit-input-placeholder,
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
   }
 }
+
+.overlay {
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #444444;
+}
+
+.gallery-block.grid-gallery a:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
