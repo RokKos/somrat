@@ -893,7 +893,7 @@ input:checked+label span:last-child {
 
 .video-presentation {
   background: #222222;
-  padding: 70px 0px;
+  padding: 10px 0px;
 }
 
 /*--------------------------------
@@ -906,7 +906,6 @@ input:checked+label span:last-child {
 
 .dialogs {
   background: #222222;
-  padding: 70px 0px;
 }
 
 /*--------------------------------
