@@ -6,6 +6,10 @@
 	----------------------------------*/
 	$(window).on('load', function () {
 		$('.preloader').fadeOut(100);
+		
+		baguetteBox.run('.grid-gallery', {
+			animation: 'slideIn'
+		});
 	});
 
 	/*--------------------------------
