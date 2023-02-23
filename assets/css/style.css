@@ -151,7 +151,7 @@ body {
 .scroll-up.hvr-icon-up:before {
   content: "\f077";
   font-size: 15px;
-  font-family: 'nan_success_sans_triallight', sans-serif;
+  font-family: 'Font Awesome 5 Free', sans-serif;
   font-weight: 900;
   height: 30px;
   width: 30px;
@@ -855,7 +855,6 @@ input:checked+label span:last-child {
 .download-cv:hover,
 .download-cv:focus {
   text-decoration: none;
-  color: #3661bd;
 }
 
 .about-images img {
@@ -882,16 +881,6 @@ input:checked+label span:last-child {
   -ms-filter: grayscale(0%);
   -o-filter: grayscale(0%);
   filter: grayscale(0%);
-}
-
-.about .hvr-icon-hang:before {
-  content: "\f0ab";
-  position: absolute;
-  font-family: 'nan_success_sans_triallight', sans-serif;
-  right: 8px;
-  font-weight: 900;
-  top: 6px;
-  font-size: 16px;
 }
 
 /*--------------------------------
@@ -1151,8 +1140,12 @@ textarea.form-control::-webkit-input-placeholder,
 .hvr-icon-push:before {
   content: "\f1d8";
   right: 19px;
-  font-family: 'px_groteskregular', sans-serif;
+  font-family: 'Font Awesome 5 Free', sans-serif;
   font-weight: 900;
+}
+
+.hvr-icon-hang:before {
+  font-family: 'Font Awesome 5 Free', sans-serif;
 }
 
 .footer {
@@ -1777,8 +1770,8 @@ textarea.form-control::-webkit-input-placeholder,
 
 .trak {
   height: 100%;
+  width: 100%;
   overflow-x: scroll;
-  overflow-y: hidden;
 }
 .trak-img {
   object-fit: contain;
