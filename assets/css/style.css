@@ -20,10 +20,12 @@ body {
   margin-right:0;
 }
 
+/*todo naredi book-text*/
 .content {
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;
+  font-size: 32px;
 }
 .content a {
   color: inherit;
@@ -202,6 +204,10 @@ body {
 
 .owl-full-width div {
   height: 100%;
+}
+
+.full-width-img {
+  width: 100%;
 }
 
 .header .slider::after,
@@ -576,7 +582,7 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .desktop-menu .hvr-underline-from-left.dark:before {
-  background: #6f6f6f;
+  background: #000000;
 }
 
 .desktop-menu {
@@ -603,7 +609,7 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .menu-item-transparent.menu-item a {
-  color: #f04f2c;
+  color: #000000;
 }
 
 /* ========= Mobile Menu ======= */
@@ -763,33 +769,23 @@ a:hover, a:visited, a:link, a:active {
 
 .about-text h1 {
   position: relative;
-  color: #6f6f6f;
+  color: #ffffff;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
-.about-text h1:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -8px;
-  width: 47px;
-  height: 5px;
-  background: #6f6f6f;
-}
-
 .about-text body {
-  color: #6f6f6f;
+  color: #ffffff;
 }
 
 .about-text p {
-  color: #6f6f6f;
+  color: #dfdfdf;
   line-height: 1.4;
   font-size: 32px;
 }
 
 .about-text-small p {
-  color: #6f6f6f;
+  color: #dfdfdf;
   font-size: 24px;
   margin-top: 50px;
 }
@@ -797,13 +793,14 @@ a:hover, a:visited, a:link, a:active {
 
 .download-cv {
   text-decoration: none;
-  color: #0741c0;
+  color: #b282e3;
   font-weight: 700;
   font-size: 48px;
-  margin-top: 15px;
+  margin-top: 100px;
+  margin-bottom: 80px;
   display: inline-block;
-  border: 4px solid #0741c0;
-  padding: 7px 10px;
+  border: 6px solid #b282e3;
+  padding: 10px 10px;
   width: 100%;
   text-align: center;
 }
@@ -811,6 +808,7 @@ a:hover, a:visited, a:link, a:active {
 .download-cv:hover,
 .download-cv:focus {
   text-decoration: none;
+  color: #b282e3;
 }
 
 .about-images img {
@@ -872,28 +870,26 @@ a:hover, a:visited, a:link, a:active {
 ----------------------------------*/
 
 .book {
-  background: #ffffff;
+  background: #000000;
   padding: 125px 0px 70px 0px;
   font-size: 40px;
-  color: #6f6f6f;
+  color: #dfdfdf;
+}
+
+.book-text  {
+  color: #dfdfdf;
 }
 
 .book-text h1 {
   position: relative;
-  color: #6f6f6f;
+  color: #dfdfdf;
   font-weight: 700;
   font-size: 52px;
   letter-spacing: 2px;
 }
 
-.book-text h1:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -8px;
-  width: 47px;
-  height: 5px;
-  background: #6f6f6f;
+.book-holder {
+  width: 100%;
 }
 
 /*--------------------------------
@@ -906,7 +902,7 @@ a:hover, a:visited, a:link, a:active {
 ----------------------------------*/
 
 .portfolio {
-  background: #fff;
+  background: #000000;
   padding: 70px 0px;
 }
 
@@ -917,17 +913,6 @@ a:hover, a:visited, a:link, a:active {
   letter-spacing: 4px;
   position: relative;
 }
-
-.portfolio h1:before {
-  content: "";
-  height: 5px;
-  background: #6f6f6f;
-  position: absolute;
-  top: -15px;
-  left: 46.5%;
-  right: 46.5%;
-}
-
 /*--------------------------------
  End Portfolio
 ----------------------------------*/
@@ -943,7 +928,8 @@ a:hover, a:visited, a:link, a:active {
   background: #ffffff;
   padding: 125px 0px 70px 0px;
   font-size: 40px;
-  color: #6f6f6f;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .team-text h1 {
@@ -955,26 +941,16 @@ a:hover, a:visited, a:link, a:active {
   letter-spacing: 2px;
 }
 
-.team-text h1:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -8px;
-  width: 47px;
-  height: 5px;
-  background: #6f6f6f;
-}
-
 .team-lead-name {
-  font-size: 80px;
-}
-
-.team-lead-role {
   font-size: 45px;
 }
 
+.team-lead-role {
+  font-size: 35px;
+}
+
 .team-lead-description {
-  font-size: 32px;
+  font-size: 25px;
 }
 
 .card{
@@ -988,15 +964,15 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .team-member-name {
-  font-size: 60px;
+  font-size: 35px;
 }
 
 .team-member-role {
-  font-size: 38px;
+  font-size: 27px;
 }
 
 .team-member-description {
-  font-size: 28px;
+  font-size: 20px;
 }
 
 
@@ -1044,18 +1020,6 @@ a:hover, a:visited, a:link, a:active {
   color: #fff;
   font-weight: 700;
   letter-spacing: 2px;
-}
-
-.contact-holder h1:before {
-  content: "";
-  position: absolute;
-  top: -8px;
-  right: 6px;
-  left: 0;
-  margin: auto;
-  width: 47px;
-  height: 5px;
-  background: #fff;
 }
 
 .form-container {
@@ -1780,8 +1744,9 @@ textarea.form-control::-webkit-input-placeholder,
 
 /* ---- Gallery -------------------*/
 .gallery-block.grid-gallery{
-  padding-bottom: 60px;
+  padding-bottom: 120px;
   padding-top: 60px;
+  background-color: #000000;
 }
 
 .gallery-block.grid-gallery .heading{
@@ -1837,3 +1802,13 @@ textarea.form-control::-webkit-input-placeholder,
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+.kolofon-text-h1  {
+  color: #dfdfdf;
+}
+
+.kolofon-text {
+  font-size: 20px;
+  color: #dfdfdf;
+}
+

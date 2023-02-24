@@ -127,7 +127,7 @@
           
             {{ with .Params.button }}
             {{ if .enable }}
-            <a href="{{ .link }}" class="download-cv hvr-icon-hang"> {{ .label }} &nbsp; &nbsp; &nbsp;</a>
+            <a href="{{ .link }}" class="download-cv hvr-icon-wobble-horizontal"> {{ .label }} &nbsp; &nbsp; &nbsp;</a>
             {{ end }}
             {{ end }}
           
@@ -143,12 +143,15 @@
   <div class="wow fadeInUp" data-wow-duration="1.5s">
     <div class="container">
 
-      <!-- {{ range $index, $num := .Page.Resources }}
+      <!--       {{ range .Page.Resources }}
       
-      <div class="testimonial-holder">
-        {{partial "img.html" (dict "File" . "Alt" .)}}
+      <div class="col-4 item">
+        <a class="lightbox" href="{{.RelPermalink}}">
+          <img class="img-fluid image scale-on-hover" src="{{.RelPermalink}}">
+          <div class="overlay"><div class="overlay-text">Hello World</div></div>
+        </a>
       </div>
-      {{ end }}-->
+      {{end}}-->
 
       <div class="row">
         <div class="col-4 item">
@@ -236,7 +239,7 @@
           {{ end }}
         </div>
       </div>
-        <div class="owl-carousel owl-theme wow fadeInUp" data-wow-duration="1.5s">
+        <div class="owl-carousel full-width-img  wow fadeInUp" data-wow-duration="1.5s">
           {{ range .Page.Resources }}
             <div class="testimonial-holder">
               {{partial "img.html" (dict "File" . "Alt" .)}}
@@ -254,9 +257,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 team-text d-flex align-self-center">
-          <h1 class="wow fadeInUp" data-wow-duration="1.5s">{{ .Title | markdownify }}</h1>
+          <h1 class="team-lead-name wow fadeInUp" data-wow-duration="1.5s">{{ .Title | markdownify }}</h1>
         </div>
-        <div class="col-12 mb-5 pb-5">
+        <div class="col-12 mb-5 pb-5 ">
           <div class="row align-items-center">
             <div class="col-lg-4 col-md-5 col-sm-12 mb-5 ">
               <div class = "w-100"></div>
@@ -311,8 +314,9 @@
 <section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="project-exhibitions">
   <div class="container">
     <div class="row no-marginLR">
-      <h1 class="wow fadeInUp" data-wow-duration="1.5s">{{ .Title | markdownify }}</h1>
-        <div class="content wow fadeInUp" data-wow-duration="1.5s">{{ .Content | markdownify | emojify }}</div>
+      <h1 class="wow fadeInUp" data-wow-duration="1.5s"> <div class="kolofon-text-h1">{{ .Title | markdownify }}</div></h1>
+        <div class="content wow fadeInUp" data-wow-duration="1.5s">
+          <div class="kolofon-text">{{ .Content | markdownify | emojify }}</div></div>
     </div>
   </div>
 </section>
@@ -324,8 +328,9 @@
 <section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="media-coverage">
   <div class="container">
     <div class="row no-marginLR">
-      <h1 class="wow fadeInUp" data-wow-duration="1.5s">{{ .Title | markdownify }}</h1>      
-      <div class="content wow fadeInUp" data-wow-duration="1.5s">{{ .Content | markdownify | emojify }}</div>
+      <h1 class="wow fadeInUp" data-wow-duration="1.5s"><div class="kolofon-text-h1">{{ .Title | markdownify }}</div></h1>      
+      <div class="content wow fadeInUp" data-wow-duration="1.5s">
+        <div class="kolofon-text">{{ .Content | markdownify | emojify }}</div></div>
     </div>
   </div>
 </section>
@@ -349,24 +354,26 @@
 <!-- Start kolofon -->
 {{ with .GetPage "09-kolofon"}}
 <section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="kolofon">
-  <div class="container-fluid">
-    <h1 class="wow fadeInUp" data-wow-duration="1.5s">{{ .Title | markdownify }}</h1>
+  <div class="container">
+    <div class="row">
+    <h1 class="wow fadeInUp" data-wow-duration="1.5s"><div class="kolofon-text-h1">{{ .Title | markdownify }}</div></h1>
+  </div>
     <div class="row">
       {{- $sectionDelimiter := "<!-- section break -->" -}}
       {{- $rawContentSections := split .RawContent $sectionDelimiter -}}
       {{- if gt (len $rawContentSections) 1 -}}
       <div class="col-lg-6 col-md-6 col-sm-6">
-        <div class="content wow fadeInUp" data-wow-duration="1.5s">{{ index $rawContentSections 0 | .RenderString | markdownify | emojify }}</div>
+        <div class="content wow fadeInUp" data-wow-duration="1.5s"><div class="kolofon-text">{{ index $rawContentSections 0 | .RenderString | markdownify | emojify }}</div></div>
       </div>
       <div class="col-lg-6 col-sm-6 col-9">
-        <div class="content wow fadeInUp" data-wow-duration="1.5s">{{ index $rawContentSections 1 | markdownify | emojify }}</div>
+        <div class="content wow fadeInUp" data-wow-duration="1.5s"><div class="kolofon-text">{{ index $rawContentSections 1 | markdownify | emojify }}</div></div>
       </div>
       
     </div>
     <div class="row"><div class="w-100"><div class="col"></div>&nbsp;</div></div>
     <div class="row">
       <div class="col">
-        <div class="content wow fadeInUp" data-wow-duration="1.5s">{{ index $rawContentSections 2 | .RenderString | markdownify | emojify }}</div>
+        <div class="content wow fadeInUp" data-wow-duration="1.5s"><div class="kolofon-text">{{ index $rawContentSections 2 | .RenderString | markdownify | emojify }}</div></div>
       </div>
     </div>
     {{- end -}}
@@ -377,27 +384,15 @@
 
 <!-- Start Contact -->
 {{ with .GetPage "11-logotips"}}
-<section class="contact {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="contact">
+<section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="contact">
   <div class="container">
-    <div class="row">
-      <div class="footer col-lg-10 offset-lg-1">
-        <hr>
-      </div>
-    </div>
-    <div class="row">      
+  
+    <div class="row no-marginLR">      
         {{ range .Page.Resources }}
         <div class="col-3">
             {{partial "img.html" (dict "File" . "Alt" .)}}
         </div>
         {{ end }}
-    </div>
-      <div class="row">
-        <div class="col">
-        <div class="credit content">
-          {{ site.Params.copyright | markdownify }}
-        </div>
-      </div>
-      </div>
     </div>
   </div>
 </section>
