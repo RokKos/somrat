@@ -38,8 +38,10 @@
       {{ if eq $pageLang .Lang}}
 
       {{ else }}
-      <div class="col-lg-1 offset-lg-3 col-sm-1 offset-sm-3 justify-content-end mt-5 head-container">
-        <a href="{{ .Permalink }}">{{ .Language }}</a>
+      <div class="col-lg-2 offset-lg-2 col-sm-2 offset-sm-2 justify-content-end mt-5">
+        <div class="translation-text">
+          <a href="{{ .Permalink }}" >{{ .Language }}</a>
+        </div>
       </div>
       {{ end }}
       {{ end }}
