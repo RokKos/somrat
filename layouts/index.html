@@ -103,6 +103,36 @@
 {{ end }}
 <!-- End Predstavitveni video -->
 
+<!-- Start About project -->
+{{ with .GetPage "02-about" }}
+<section class="about {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="about">
+  <div class="container">
+    <div class="row no-marginLR">
+      {{- $sectionDelimiter := "<!-- Small Text -->" -}}
+      {{- $rawContentSections := split .RawContent $sectionDelimiter -}}
+      {{- if gt (len $rawContentSections) 1 -}}
+      <div class="text-holder wow fadeInUp" data-wow-duration="1.5s">
+        <div class="about-text d-flex align-self-center">
+            <div class="content">{{ index $rawContentSections 0 | .RenderString | markdownify | emojify }}</div>
+        </div>
+        <div class="about-text-small d-flex align-self-center">
+            <div class="content">{{ index $rawContentSections 1 | .RenderString | markdownify | emojify }}</div>
+        </div>
+        {{ end }}
+
+        {{ with .Params.button }}
+          {{ if .enable }}
+          <a href="{{ .link }}" class="download-cv hvr-icon-hang"> {{ .label }} &nbsp; &nbsp; &nbsp;</a>
+          {{ end }}
+          {{ end }}
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+<!-- End About project -->
+
 <section class="gallery-block grid-gallery">
   <div class="wow fadeInUp" data-wow-duration="1.5s">
     <div class="container">
@@ -173,36 +203,6 @@
     </div>
   </div>
 </section>
-
-<!-- Start About project -->
-{{ with .GetPage "02-about" }}
-<section class="about {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="about">
-  <div class="container">
-    <div class="row no-marginLR">
-      {{- $sectionDelimiter := "<!-- Small Text -->" -}}
-      {{- $rawContentSections := split .RawContent $sectionDelimiter -}}
-      {{- if gt (len $rawContentSections) 1 -}}
-      <div class="text-holder wow fadeInUp" data-wow-duration="1.5s">
-        <div class="about-text d-flex align-self-center">
-            <div class="content">{{ index $rawContentSections 0 | .RenderString | markdownify | emojify }}</div>
-        </div>
-        <div class="about-text-small d-flex align-self-center">
-            <div class="content">{{ index $rawContentSections 1 | .RenderString | markdownify | emojify }}</div>
-        </div>
-        {{ end }}
-
-        {{ with .Params.button }}
-          {{ if .enable }}
-          <a href="{{ .link }}" class="download-cv hvr-icon-hang"> {{ .label }} &nbsp; &nbsp; &nbsp;</a>
-          {{ end }}
-          {{ end }}
-      </div>
-    </div>
-    </div>
-  </div>
-</section>
-{{ end }}
-<!-- End About project -->
 
 <!-- Start Dialogi -->
 {{ with .GetPage "03-dialogs" }}
@@ -286,7 +286,12 @@
       <div class="row"><div class="w-100"><div class="col"></div>&nbsp;</div></div>
         <div class="row">
           <div class="col">
-            <div class="content wow fadeInUp" data-wow-duration="1.5s">{{ .Content | markdownify | emojify }}</div>
+            <div class="content wow fadeInUp" data-wow-duration="1.5s">
+              <div class="text-center">
+                <a href="{{site.BaseURL | absLangURL}}{{ .Params.OthersURL }}">{{ .Content | markdownify | emojify }}</a>
+              </div>
+              
+            </div>
           </div>
         </div>
       </div>
