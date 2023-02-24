@@ -4,10 +4,8 @@
 {{ with .GetPage "00-banner" }}
 <section class="header {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="home">
   <div class="slider-prev-button slider-button">
-    <i class="fa fa-angle-left"></i>
   </div>
   <div class="slider-next-button slider-button">
-    <i class="fa fa-angle-right"></i>
   </div>
   <div class="owl-carousel owl-full-width owl-theme" id="background-slide">
     {{ range $elem_index, $elem_val := .Page.Resources }}
@@ -38,9 +36,9 @@
       {{ if eq $pageLang .Lang}}
 
       {{ else }}
-      <div class="col-lg-2 offset-lg-2 col-sm-2 offset-sm-2 justify-content-end mt-5">
+      <div class="col-lg-1 offset-lg-3 col-sm-1 offset-sm-3 justify-content-end mt-5">
         <div class="translation-text">
-          <a href="{{ .Permalink }}" >{{ .Language }}</a>
+          <a href="{{ .Permalink }}" >{{- .Language.LanguageName | emojify -}}</a>
         </div>
       </div>
       {{ end }}
@@ -98,7 +96,7 @@
 {{ with .GetPage "01-video-presentation" }}
 <section class="video-presentation {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="video-presentation">
     <div class="wow fadeInUp" data-wow-duration="1.5s">
-        <lite-vimeo videoid="608334799"></lite-vimeo>
+        <lite-vimeo videoid="484916686"></lite-vimeo>
     </div>
   </div>
 </section>
@@ -215,7 +213,7 @@
 <!-- Start Dialogi -->
 {{ with .GetPage "03-dialogs" }}
 <section class="dialogs {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="dialogs">
-    <lite-vimeo videoid="608334799"></lite-vimeo>
+    <lite-vimeo videoid="484916686"></lite-vimeo>
 </section>
 {{ end }}
 <!-- End Dialogi -->
