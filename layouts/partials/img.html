@@ -31,8 +31,6 @@
 {{/* only use images smaller than or equal to the src (original) 
 image size, as Hugo will upscale small images */}}
 
-
-<a href="{{ $src.RelPermalink }}">
     <picture>
     
     <source media="(max-width: 376px)" 
@@ -53,7 +51,6 @@ image size, as Hugo will upscale small images */}}
    height="{{ $src.Height}}" width="{{ $src.Width }}" class="img-fluid">
 
 </picture>
-</a>
   
   {{/* Since I do image-response class, the only thing that really 
   matters is the height and width matches the image aspect ratio */}}

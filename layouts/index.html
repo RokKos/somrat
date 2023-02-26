@@ -139,11 +139,12 @@
 {{ end }}
 <!-- End About project -->
 
+{{ with .GetPage "gallery" }}
 <section class="gallery-block grid-gallery">
   <div class="wow fadeInUp" data-wow-duration="1.5s">
     <div class="container">
-
-      <!--       {{ range .Page.Resources }}
+      <div class="row">
+      {{ range .Page.Resources }}
       
       <div class="col-4 item">
         <a class="lightbox" href="{{.RelPermalink}}">
@@ -151,67 +152,11 @@
           <div class="overlay"><div class="overlay-text">Hello World</div></div>
         </a>
       </div>
-      {{end}}-->
-
-      <div class="row">
-        <div class="col-4 item">
-          <a class="lightbox" href="http://www.politicalmetaphors.com/wp-content/uploads/2015/04/blog-shapes-square-windows.jpg">
-            <img class="img-fluid image scale-on-hover" src="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070505/Gallery/image1.jpg">
-            <div class="overlay"><div class="overlay-text">Hello World</div></div>
-          </a>
-        </div>
-        <div class="col-4 item">
-          <a class="lightbox" title="This is title" data-caption="Image caption" href="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070507/Gallery/image2.jpg">
-            <img class="img-fluid image scale-on-hover" src="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070507/Gallery/image2.jpg">
-            <div class="overlay"><div class="overlay-text">Hello World</div></div>
-          </a>
-        </div>
-        <div class="col-4 item">
-          <a class="lightbox" href="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070506/Gallery/image3.jpg">
-            <img class="img-fluid image scale-on-hover" src="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070506/Gallery/image3.jpg">
-            <div class="overlay"><div class="overlay-text">Hello World</div></div>
-          </a>
-        </div>
-        <div class="col-4 item">
-          <a class="lightbox" href="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070505/Gallery/image4.jpg">
-            <img class="img-fluid image scale-on-hover" src="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070505/Gallery/image4.jpg">
-            <div class="overlay"><div class="overlay-text">Hello World</div></div>
-          </a>
-        </div>
-        <div class="col-4 item">
-          <a class="lightbox" href="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070506/Gallery/image5.jpg">
-            <img class="img-fluid image scale-on-hover" src="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070506/Gallery/image5.jpg">
-            <div class="overlay"><div class="overlay-text">Hello World</div></div>
-          </a>
-        </div>
-        <div class="col-4 item">
-          <a class="lightbox" href="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070508/Gallery/image6.jpg">
-            <img class="img-fluid image scale-on-hover" src="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070508/Gallery/image6.jpg">
-            <div class="overlay"><div class="overlay-text">Hello World</div></div>
-          </a>
-        </div>
-        <div class="col-4 item">
-          <a class="lightbox" href="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070509/Gallery/image7.jpg">
-            <img class="img-fluid image scale-on-hover" src="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070509/Gallery/image7.jpg">
-            <div class="overlay"><div class="overlay-text">Hello World</div></div>
-          </a>
-        </div>
-        <div class="col-4 item">
-          <a class="lightbox" href="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070510/Gallery/image8.jpg">
-            <img class="img-fluid image scale-on-hover" src="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070510/Gallery/image8.jpg">
-            <div class="overlay"><div class="overlay-text">Hello World</div></div>
-          </a>
-        </div>
-        <div class="col-4 item">
-          <a class="lightbox" href="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070507/Gallery/image9.jpg">
-            <img class="img-fluid image scale-on-hover" src="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070507/Gallery/image9.jpg">
-            <div class="overlay"><div class="overlay-text">Hello World</div></div>
-          </a>
-        </div>
-      </div>
+      {{end}}
     </div>
   </div>
 </section>
+{{ end }}
 
 <!-- Start Dialogi -->
 {{ with .GetPage "03-dialogs" }}

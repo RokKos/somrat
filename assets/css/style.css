@@ -1767,6 +1767,8 @@ textarea.form-control::-webkit-input-placeholder,
 .gallery-block.grid-gallery .item img{
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
   transition: 0.4s;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .gallery-block.grid-gallery .item{
