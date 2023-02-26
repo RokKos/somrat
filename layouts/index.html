@@ -266,10 +266,12 @@
               {{partial "img.html" (dict "File" (.Page.Resources.GetMatch .Params.team_lead_image) "Alt" (.Params.team_lead_name | markdownify))}}
             </div>
             <div class="col-md-6">
-              <h2><div class="team-lead-name">{{ .Params.team_lead_name | markdownify }}</div></h2>
-              <p class="team-lead-role">{{ .Params.team_lead_role | markdownify }}</p>
-              <h6 class="team-lead-description">{{ .Params.team_lead_description | markdownify }}</h6>
-              <a href="{{ .Params.team_lead_link }}" class="team-lead-description {{.Params.team_lead_link_icon}}">{{ .Params.team_lead_link  | replaceRE "https://" "" | replaceRE "instagram.com" "" }}</a>
+              <div style="color:{{ .Params.team_lead_text_color }}">
+                <h2><div class="team-lead-name">{{ .Params.team_lead_name | markdownify }}</div></h2>
+                <p class="team-lead-role">{{ .Params.team_lead_role | markdownify }}</p>
+                <h6 class="team-lead-description">{{ .Params.team_lead_description | markdownify }}</h6>
+                <a href="{{ .Params.team_lead_link }}" class="team-lead-description {{.Params.team_lead_link_icon}}">&nbsp;{{ .Params.team_lead_link  | replaceRE "https://" "" | replaceRE "instagram.com/" "" }}</a>
+              </div>
             </div>
           </div>
         </div>
@@ -283,10 +285,12 @@
             {{partial "img.html" (dict "File" ($teamPhotoResource.GetMatch .image) "Alt" (.name | markdownify))}}
             </div>
             <div class="card-body p-0">
-              <h3 class="team-member-name">{{ .name | markdownify }}</h3>
-              <p class="team-member-role">{{ .role | markdownify }}</p>
-              <h6 class="team-member-description">{{ .description | markdownify }}</h6>
-              <i class="{{.link_icon}} team-member-description"></i><a href="{{ .link }}" class="team-member-description">{{ .link | replaceRE "https://" "" | replaceRE "instagram.com" "" }}</a>
+              <div style="color:{{ .text_color }}">
+                <h3 class="team-member-name">{{ .name | markdownify }}</h3>
+                <p class="team-member-role">{{ .role | markdownify }}</p>
+                <h6 class="team-member-description">{{ .description | markdownify }}</h6>
+                <i class="{{.link_icon}} team-member-description"></i><a href="{{ .link }}" class="team-member-description">&nbsp;{{ .link | replaceRE "https://" "" | replaceRE "instagram.com/" "" }}</a>
+              </div>
             </div>
           </div>
         </div>
