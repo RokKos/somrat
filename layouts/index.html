@@ -143,13 +143,16 @@
 <section class="gallery-block grid-gallery">
     <div class="container">
       <div class="row">
-      {{ range .Page.Resources }}
+
+        {{ $galleryPhotoResource := .Page.Resources}}      
+        {{ range .Params.GalleryInfo }}
       
         <div class="col-4 item">
           <div class="wow fadeInUp" data-wow-duration="1.5s">
-          <a class="lightbox" href="{{.RelPermalink}}">
-            <img class="img-fluid image scale-on-hover" loading="lazy" src="{{.RelPermalink}}">
-            <div class="overlay"><div class="overlay-text">Hello World</div></div>
+          {{ $Photo := $galleryPhotoResource.GetMatch .ImageName }}
+          <a class="lightbox" href="{{$Photo.RelPermalink}}" data-caption="{{.ImageCaption}}" >
+            <img class="img-fluid image scale-on-hover" loading="lazy" src="{{$Photo.RelPermalink}}">
+            <div class="overlay"><div class="overlay-text">{{.ImageOverlay}}</div></div>
           </a>
         </div>
       </div>
