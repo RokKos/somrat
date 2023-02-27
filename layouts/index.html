@@ -144,8 +144,9 @@
     <div class="container">
       <div class="row">
       {{ range .Page.Resources }}
-      <div class="wow fadeInUp" data-wow-duration="1.5s">
+      
         <div class="col-4 item">
+          <div class="wow fadeInUp" data-wow-duration="1.5s">
           <a class="lightbox" href="{{.RelPermalink}}">
             <img class="img-fluid image scale-on-hover" loading="lazy" src="{{.RelPermalink}}">
             <div class="overlay"><div class="overlay-text">Hello World</div></div>
@@ -160,7 +161,7 @@
 <!-- Start Dialogi -->
 {{ with .GetPage "03-dialogs" }}
 <section class="dialogs {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="dialogs">
-    <lite-vimeo videoid="484916686"></lite-vimeo>
+    <lite-vimeo videoid="802791059"></lite-vimeo>
 </section>
 {{ end }}
 <!-- End Dialogi -->
