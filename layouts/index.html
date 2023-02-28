@@ -127,7 +127,7 @@
           
             {{ with .Params.button }}
             {{ if .enable }}
-            <a href="{{ .link }}" class="download-cv hvr-icon-wobble-horizontal"> {{ .label }} &nbsp; &nbsp; &nbsp;</a>
+            <a href="{{ .link }}" class="download-cv hvr-icon-wobble-horizontal"> {{ .label }} &nbsp; <i class="fa fa-arrow-right hvr-icon"></i></a>
             {{ end }}
             {{ end }}
           
@@ -182,7 +182,7 @@
           </div>
           {{ with .Params.button }}
           {{ if .enable }}
-          <a href="{{ .link }}" class="download-cv hvr-icon-hang"> {{ .label }} &nbsp; &nbsp; &nbsp;</a>
+          <a href="{{ .link }}" class="download-cv hvr-icon-wobble-horizontal"> {{ .label }} &nbsp; <i class="fa fa-arrow-right hvr-icon"></i></a>
           {{ end }}
           {{ end }}
         </div>
