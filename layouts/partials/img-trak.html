@@ -5,6 +5,5 @@
 {{ $alt := .Alt | safeHTML }}
     
     <img 
-    loading="lazy"
    alt="{{ $alt }}" title="{{ $alt }}" src="{{ $src.RelPermalink }}" 
-   height="{{ $src.Height}}" width="{{ $src.Width }}" class="trak-img">
+   height="{{ $src.Height}}" width="{{ $src.Width }}" class="lozad trak-img">
