@@ -519,9 +519,6 @@ a:hover, a:visited, a:link, a:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  left: 0;
-  right: 0;
   height: 55px;
   background: #333;
   -webkit-box-align: center;
