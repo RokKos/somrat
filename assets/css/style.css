@@ -10,6 +10,13 @@ html {
   outline: none;
 }
 
+main {
+  overflow-x: hidden;
+  display: flex;
+  position: sticky;
+  top:0;
+}
+
 body {
   font-family: 'px_groteskregular', sans-serif;
   height: 100%;
@@ -1683,15 +1690,17 @@ textarea.form-control::-webkit-input-placeholder,
 }
 
 .trak {
-  height: 100%;
-  width: 100%;
-  overflow-x: scroll;
+  height: 100vh;
+  width: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 .trak-img {
   object-fit: contain;
-  height:70%;
+  height:100vh;
   width: auto;
   max-width: none;
+  overflow-y: hidden;
 }
 
 /* ------ FONTS --------- */
