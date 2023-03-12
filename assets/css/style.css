@@ -908,12 +908,12 @@ a:hover, a:visited, a:link, a:active {
    Start Portfolio
 ----------------------------------*/
 
-.portfolio {
+.project-exhibitions {
   background: #000000;
-  padding: 70px 0px;
+  padding: 100px 10px 0 0;
 }
 
-.portfolio h1 {
+.project-exhibitions h1 {
   color: #6f6f6f;
   text-align: center;
   font-weight: 700;
@@ -925,8 +925,45 @@ a:hover, a:visited, a:link, a:active {
 ----------------------------------*/
 
 /*--------------------------------
-   Start Testimonials
+   Start Portfolio
 ----------------------------------*/
+
+.media-coverage {
+  background: #000000;
+  padding: 50px 10px 0 0;
+}
+
+.media-coverage h1 {
+  color: #6f6f6f;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 4px;
+  position: relative;
+}
+/*--------------------------------
+ End Portfolio
+----------------------------------*/
+
+/*--------------------------------
+   Start Portfolio
+----------------------------------*/
+
+.kolofon {
+  background: #000000;
+  padding: 100px 0;
+}
+
+.kolofon h1 {
+  color: #6f6f6f;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 4px;
+  position: relative;
+}
+/*--------------------------------
+ End Portfolio
+----------------------------------*/
+
 /*--------------------------------
   Start Team
 ----------------------------------*/
