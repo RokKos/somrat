@@ -116,7 +116,7 @@
             <div class="content">{{ index $rawContentSections 0 | .RenderString | markdownify | emojify }}</div>
         </div>
         <div class="about-text-small d-flex align-self-center">
-            <div class="content">{{ index $rawContentSections 1 | .RenderString | markdownify | emojify }}</div>
+            {{ index $rawContentSections 1 | .RenderString | markdownify | emojify }}
         </div>
         {{ end }}
       </div>
@@ -165,8 +165,20 @@
 <!-- Start Dialogi -->
 {{ with .GetPage "03-dialogs" }}
 <section class="dialogs {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="dialogs">
-    <lite-vimeo videoid="802791059"></lite-vimeo>
+  <div class="container">
+    <div class="row no-marginLR book-holder">
+      <div class="book-text">
+        <div class="text-holder  wow fadeInUp" data-wow-duration="1.5s">
+          <h1>{{ .Title | markdownify }}</h1>
+          <div class="d-flex align-self-center">
+            <div class="content">{{ .Content | markdownify | emojify }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+<lite-vimeo videoid="802791059"></lite-vimeo>
 {{ end }}
 <!-- End Dialogi -->
 

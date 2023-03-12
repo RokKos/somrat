@@ -787,9 +787,9 @@ a:hover, a:visited, a:link, a:active {
   font-size: 32px;
 }
 
-.about-text-small p {
+.about-text-small {
   color: #dfdfdf;
-  font-size: 24px;
+  font-size: 20px;
   margin-top: 50px;
 }
 
@@ -861,7 +861,10 @@ a:hover, a:visited, a:link, a:active {
 ----------------------------------*/
 
 .dialogs {
-  background: #222222;
+  background: #000000;
+  padding: 125px 0px 70px 0px;
+  font-size: 40px;
+  color: #dfdfdf;
 }
 
 /*--------------------------------
