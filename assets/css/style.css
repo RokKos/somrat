@@ -909,7 +909,7 @@ a:hover, a:visited, a:link, a:active {
 
 .project-exhibitions {
   background: #000000;
-  padding: 100px 10px 0 0;
+  padding: 100px 0px 0 0;
 }
 
 .project-exhibitions h1 {
@@ -929,7 +929,7 @@ a:hover, a:visited, a:link, a:active {
 
 .media-coverage {
   background: #000000;
-  padding: 50px 10px 0 0;
+  padding: 60px 0px 0 0;
 }
 
 .media-coverage h1 {
@@ -949,7 +949,7 @@ a:hover, a:visited, a:link, a:active {
 
 .kolofon {
   background: #000000;
-  padding: 100px 0;
+  padding: 60px 0 0 0;
 }
 
 .kolofon h1 {
@@ -962,6 +962,16 @@ a:hover, a:visited, a:link, a:active {
 /*--------------------------------
  End Portfolio
 ----------------------------------*/
+
+/*--------------------------------
+   Start Portfolio
+----------------------------------*/
+
+.logotips {
+  background: #000000;
+  padding: 20px 0;
+}
+
 
 /*--------------------------------
   Start Team

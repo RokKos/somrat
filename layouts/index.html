@@ -307,26 +307,6 @@
 {{ end }}
 <!-- End media-coverage -->
 
-<!-- Start trak -->
-{{ with .GetPage "10-trak" }}
-<section {{.Params.custom_attributes | safeHTMLAttr}} id="trak">
-  <div class="wow fadeInUp" data-wow-duration="1.5s">
-    <div class="sticky-container">
-      <main>
-        <div class="trak">
-          
-          {{ range .Page.Resources }}
-            {{partial "img-trak.html" (dict "File" . "Alt" .)}}
-          {{ end }}
-        
-        </div>
-      </main>
-    </div>
-  </div>
-</section>
-{{ end }}
-<!-- End trak -->
-
 <!-- Start kolofon -->
 {{ with .GetPage "09-kolofon"}}
 <section class="kolofon {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="kolofon">
@@ -360,7 +340,7 @@
 
 <!-- Start Contact -->
 {{ with .GetPage "11-logotips"}}
-<section class="kolofon {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="contact">
+<section class="logotips {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="logotips">
   <div class="container">
     <div class="row no-marginLR">      
         {{ range .Page.Resources }}
@@ -373,6 +353,27 @@
 </section>
 {{ end }}
 <!-- End Contact -->
+
+<!-- Start trak -->
+{{ with .GetPage "10-trak" }}
+<section {{.Params.custom_attributes | safeHTMLAttr}} id="trak">
+  <div class="wow fadeInUp" data-wow-duration="1.5s">
+    <div class="sticky-container">
+      <main>
+        <div class="trak">
+          
+          {{ range .Page.Resources }}
+            {{partial "img-trak.html" (dict "File" . "Alt" .)}}
+          {{ end }}
+        
+        </div>
+      </main>
+    </div>
+  </div>
+</section>
+{{ end }}
+<!-- End trak -->
+
 
 <a href="#home" class="scroll-up hvr-icon-up"></a>
 
