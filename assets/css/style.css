@@ -34,6 +34,7 @@ body {
   word-wrap: break-word;
   font-size: 32px;
 }
+
 .content a {
   color: inherit;
   border-bottom: 1px dashed #212121;
@@ -216,6 +217,13 @@ body {
 .full-width-img {
   width: 100%;
 }
+
+.full-width-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000000;
+}
+
 
 .header .slider::after,
 .header::after {
@@ -781,7 +789,7 @@ a:hover, a:visited, a:link, a:active {
   color: #ffffff;
 }
 
-.about-text p {
+.about-text {
   color: #dfdfdf;
   line-height: 1.4;
   font-size: 32px;
@@ -862,7 +870,7 @@ a:hover, a:visited, a:link, a:active {
 
 .dialogs {
   background: #000000;
-  padding: 125px 0px 70px 0px;
+  padding: 70px 0px 70px 0px;
   font-size: 40px;
   color: #dfdfdf;
 }
@@ -972,7 +980,6 @@ a:hover, a:visited, a:link, a:active {
   padding: 20px 0;
 }
 
-
 /*--------------------------------
   Start Team
 ----------------------------------*/
@@ -987,7 +994,7 @@ a:hover, a:visited, a:link, a:active {
 
 .team-text h1 {
   position: relative;
-  color: #6f6f6f;
+  color: #000000;
   font-weight: 700;
   font-size: 40px;
   font-size: 52px;
@@ -1799,7 +1806,7 @@ textarea.form-control::-webkit-input-placeholder,
 
 /* ---- Gallery -------------------*/
 .gallery-block.grid-gallery{
-  padding-bottom: 120px;
+  padding-bottom: 60px;
   padding-top: 60px;
   background-color: #000000;
 }
@@ -1827,7 +1834,7 @@ textarea.form-control::-webkit-input-placeholder,
 }
 
 .gallery-block.grid-gallery .item{
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 576px) {
@@ -1867,6 +1874,9 @@ textarea.form-control::-webkit-input-placeholder,
 .kolofon-text {
   font-size: 20px;
   color: #dfdfdf;
+}
+.kolofon-text a {
+  color: #007bff;
 }
 
 
