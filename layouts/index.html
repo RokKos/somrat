@@ -235,6 +235,9 @@
         <div class="row align-items-center">
             <div class = "w-100">&nbsp;</div>
 
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              {{partial "img.html" (dict "File" (.Page.Resources.GetMatch .Params.team_lead_image) "Alt" (.Params.team_lead_name | markdownify))}}
+            </div>
           <div class="col-lg-6 col-md-6">
             <div style="color:{{ .Params.team_lead_text_color }}">
               <h2><div class="team-lead-name">{{ .Params.team_lead_name | markdownify }}</div></h2>
@@ -243,9 +246,7 @@
             <i class="{{.Params.team_lead_link_icon}} team-lead-description"></i>&nbsp;<a href="{{ .Params.team_lead_link }}" class="team-lead-description" style="color:{{ .Params.team_lead_text_color }}">{{ .Params.team_lead_link  | replaceRE "https://" "" | replaceRE "instagram.com/" "" }}</a>
           </div>
           </div> 
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            {{partial "img.html" (dict "File" (.Page.Resources.GetMatch .Params.team_lead_image) "Alt" (.Params.team_lead_name | markdownify))}}
-          </div>
+          
           
         </div>
       </div>
