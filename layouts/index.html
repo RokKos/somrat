@@ -14,34 +14,34 @@
   </div>
   <div class="container">
     <div class="row content">
-      <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 mt-5 head-container">
+      <div class="col-lg-10 col-sm-10 mt-5 head-container">
         <h1 class="introduction">{{ .Title | markdownify | emojify }}</h1>
+      </div>
+          <!-- Language List -->
+          {{- if .IsTranslated }}
+          {{ $pageLang := .Page.Lang}}
+          {{ range $.Site.Home.AllTranslations }}
+          {{ if eq $pageLang .Lang}}
+    
+          {{ else }}
+          <div class="col-lg-1 offset-lg-1 col-sm-1 offset-sm-1 justify-content-end mt-5">
+            <div class="translation-text">
+              <a href="{{ .Permalink }}" >{{- .Language.LanguageName | emojify -}}</a>
+            </div>
+          </div>
+          {{ end }}
+          {{ end }}
+          {{ end }}
+    </div>
+    <div class="row content">
+      <div class="col head-container">
         <div class="animated-text">
-          <strong class="cd-headline clip">
-            <span class="cd-words-wrapper">
               {{ range $index, $elements:= .Params.animated_text }}
-              <b {{ if eq $index 0 }} class="is-visible" {{ end }}>{{ . }}</b>
+              <b>{{ . }}</b><br>
               {{ end }}
-            </span>
-          </strong>
         </div>
         <h3 class="by-nejc">{{ .Content | emojify }}</h3>
       </div>
-          <!-- Language List -->
-      {{- if .IsTranslated }}
-      {{ $pageLang := .Page.Lang}}
-      {{ range $.Site.Home.AllTranslations }}
-      {{ if eq $pageLang .Lang}}
-
-      {{ else }}
-      <div class="col-lg-1 offset-lg-3 col-sm-1 offset-sm-3 justify-content-end mt-5">
-        <div class="translation-text">
-          <a href="{{ .Permalink }}" >{{- .Language.LanguageName | emojify -}}</a>
-        </div>
-      </div>
-      {{ end }}
-      {{ end }}
-      {{ end }}
     </div>
   </div>
     
@@ -147,7 +147,7 @@
     <div class="row">
 
       {{ $galleryPhotoResource := .Page.Resources}}      
-      {{ range .Params.GalleryInfo }}
+      {{ range $index, $element :=  .Params.GalleryInfo }}
     
       <div class="col-4 item">
         <div class="wow fadeInUp" data-wow-duration="1.5s">
@@ -387,8 +387,5 @@
 </section>
 {{ end }}
 <!-- End trak -->
-
-
-<a href="#home" class="scroll-up hvr-icon-up"></a>
 
 {{ end }}
