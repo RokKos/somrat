@@ -1543,7 +1543,7 @@ textarea.form-control::-webkit-input-placeholder,
   }
 
   .book-text h1 {
-    font-size: 47px;
+    font-size: 43px;
   }
 
   .kolofon-text {
@@ -1995,7 +1995,17 @@ textarea.form-control::-webkit-input-placeholder,
     margin-bottom: 10px;
   }
 }
+@media(max-width: 550px) and (min-height: 501px) {
+.overlay-text {
+  color: white;
+  font-size: 1px;
+  font-family: 'px_groteskregular';
+  position: relative;
+  text-align: center;
+}
+}
 
 /*--------------------------------
   End Contact
-----------------------------------
+----------------------------------*/
+
