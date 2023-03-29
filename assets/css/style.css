@@ -4,6 +4,7 @@
 
 html {
   height: 100%;
+  scrollbar-width: none;
 }
 
 * {
@@ -21,6 +22,12 @@ main {
 body {
   font-family: 'px_groteskregular', sans-serif;
   height: 100%;
+  width: 100%;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar{
+  display: none;
 }
 
 .no-marginLR {
@@ -302,6 +309,7 @@ body {
   font-size: 120px;
   font-family: 'nan_success_titling_trialwide';
   line-height: 1;
+  overflow-wrap: anywhere;
 }
 
 .animated-text {
