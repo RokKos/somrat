@@ -14,24 +14,9 @@
   </div>
   <div class="container">
     <div class="row content">
-      <div class="col-lg-10 col-sm-10 mt-5 head-container">
+      <div class="col-lg-11 col-sm-11 mt-5 head-container">
         <h1 class="introduction">{{ .Title | markdownify | emojify }}</h1>
       </div>
-          <!-- Language List -->
-          {{- if .IsTranslated }}
-          {{ $pageLang := .Page.Lang}}
-          {{ range $.Site.Home.AllTranslations }}
-          {{ if eq $pageLang .Lang}}
-    
-          {{ else }}
-          <div class="col-lg-1 offset-lg-1 col-sm-1 offset-sm-1 justify-content-end mt-5">
-            <div class="translation-text">
-              <a href="{{ .Permalink }}" >{{- .Language.LanguageName | emojify -}}</a>
-            </div>
-          </div>
-          {{ end }}
-          {{ end }}
-          {{ end }}
     </div>
     <div class="row content">
       <div class="col head-container">
@@ -62,6 +47,19 @@
                 href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
             </li>
             {{ end }}
+             <!-- Language List -->
+          {{- if .IsTranslated }}
+          {{ $pageLang := .Page.Lang}}
+          {{ range $.Site.Home.AllTranslations }}
+          {{ if eq $pageLang .Lang}}
+    
+          {{ else }}
+          <li class="menu-item hvr-underline-from-left 1">
+            <a href="{{ .Permalink }}" >{{- .Language.LanguageName -}}</a>
+          </li>
+          {{ end }}
+          {{ end }}
+          {{ end }}
           </ul>
         </div>
       </div>  
@@ -85,6 +83,19 @@
                 href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
             </li>
             {{ end }}
+               <!-- Language List -->
+          {{- if .IsTranslated }}
+          {{ $pageLang := .Page.Lang}}
+          {{ range $.Site.Home.AllTranslations }}
+          {{ if eq $pageLang .Lang}}
+    
+          {{ else }}
+          <li class="hvr-shutter-out-vertical mobile-menu-item 1">
+            <a href="{{ .Permalink }}" >{{- .Language.LanguageName -}}</a>
+          </li>
+          {{ end }}
+          {{ end }}
+          {{ end }}
           </ul>
         </nav>
       </div>
