@@ -1378,16 +1378,9 @@ textarea.form-control::-webkit-input-placeholder,
 }
 
 .gallery-block.grid-gallery .item{
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
-@media (min-width: 576px) {
-
-  .gallery-block.grid-gallery .scale-on-hover:hover{
-    transform: scale(1.05);
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
-  }
-}
 .overlay {
   opacity: 0;
   transition: .5s ease;
