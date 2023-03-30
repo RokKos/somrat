@@ -35,7 +35,6 @@ body::-webkit-scrollbar{
   margin-right:0;
 }
 
-/*todo naredi book-text*/
 .content {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -641,7 +640,7 @@ a:hover, a:visited, a:link, a:active {
   right: 0;
   height: 55px;
   top: 0;
-  background: #fff;
+  background: #d6fcd6;
   box-shadow: 0px 0px 4px 0px;
   transition: all 0.5s;
 }
@@ -931,7 +930,7 @@ a:hover, a:visited, a:link, a:active {
 
 .project-exhibitions h1 {
   color: #6f6f6f;
-  text-align: center;
+  text-align: left;
   font-weight: 700;
   letter-spacing: 4px;
   position: relative;
@@ -951,7 +950,7 @@ a:hover, a:visited, a:link, a:active {
 
 .media-coverage h1 {
   color: #6f6f6f;
-  text-align: center;
+  text-align: left;
   font-weight: 700;
   letter-spacing: 4px;
   position: relative;
@@ -971,7 +970,7 @@ a:hover, a:visited, a:link, a:active {
 
 .kolofon h1 {
   color: #6f6f6f;
-  text-align: center;
+  text-align: left;
   font-weight: 700;
   letter-spacing: 4px;
   position: relative;
@@ -1548,6 +1547,22 @@ textarea.form-control::-webkit-input-placeholder,
 
   .kolofon-text {
     font-size: 17px;
+  }
+
+  .team {
+    padding: 40px 0px 70px 0px;
+  }
+
+  .book {
+    padding: 70px 0px 100px 0px;
+  }
+
+  .download-cv {
+    font-size: 40px;
+  }
+
+  main {
+    overflow-x: auto;
   }
 
 }

@@ -134,19 +134,17 @@
         {{ end }}
       </div>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-6">
-        <div class=" wow fadeInUp" data-wow-duration="1.5s">
-          
-            {{ with .Params.button }}
-            {{ if .enable }}
-            <a href="{{ .link }}" class="download-cv hvr-icon-wobble-horizontal"> {{ .label }} &nbsp; <i class="fa fa-arrow-right hvr-icon"></i></a>
-            {{ end }}
-            {{ end }}
-          
-        </div>
-      </div>
+    
+    <div class=" wow fadeInUp" data-wow-duration="1.5s">
+      
+        {{ with .Params.button }}
+        {{ if .enable }}
+        <a href="{{ .link }}" class="download-cv hvr-icon-wobble-horizontal"> {{ .label }} &nbsp; <i class="fa fa-arrow-right hvr-icon"></i></a>
+        {{ end }}
+        {{ end }}
+      
     </div>
+
   </div>
 </section>
 {{ end }}
@@ -369,7 +367,7 @@
   <div class="container">
     <div class="row no-marginLR">      
         {{ range .Page.Resources }}
-        <div class="col-3">
+        <div class="col-6">
             {{partial "img.html" (dict "File" . "Alt" .)}}
         </div>
         {{ end }}
