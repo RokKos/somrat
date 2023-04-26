@@ -38,7 +38,7 @@
   {{ end }}
 
   {{ with .Params.image }}
-  <meta property="og:image" content="{{ . | absURL }}" />
+  <meta property="og:image" content="{{ site.Params.og_image | absURL }}" />
   {{ end }}
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/google_analytics.html" . }}
