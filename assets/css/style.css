@@ -4,7 +4,7 @@
 
 html {
   height: 100%;
-  scrollbar-width: none;
+  scrollbar-width: thin;
 }
 
 * {
@@ -23,11 +23,18 @@ body {
   font-family: 'px_groteskregular', sans-serif;
   height: 100%;
   width: 100%;
-  -ms-overflow-style: none;
+  /*-ms-overflow-style: none;*/
 }
 
-body::-webkit-scrollbar{
-  display: none;
+::-webkit-scrollbar {
+  width: 8px; /* Adjust scrollbar width */
+  background-color: rgb(0, 0, 0);
+}
+
+/* Set the thumb (the draggable part) color and border-radius */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5); /* Change the color and opacity as desired */
+  border-radius: 4px;
 }
 
 .no-marginLR {
