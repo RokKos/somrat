@@ -368,7 +368,7 @@
   <div class="container">
     <div class="row no-marginLR">      
         {{ range .Page.Resources }}
-        <div class="col-6">
+        <div class="col-lg-4 col-md-4 col-sm-8">
             {{partial "img.html" (dict "File" . "Alt" .)}}
         </div>
         {{ end }}
